@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRE Centro de Treinamento | Muay Thai</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+
+    <!-- Topo: logo, título e botões de WhatsApp -->
+    <div class="hero">
+      <img class="logo" src="img/logo_ct_sem_fundo.png" alt="Logo CT Fire">
+
+      <h1>FORJANDO <b>DISCIPLINA</b></h1>
+      <h1>IMPONDO <b>RESPEITO</b></h1>
+
+      <p class="experimental">FAÇA JÁ SUA AULA EXPERIMENTAL!</p>
+
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://wa.me/5581996265010?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 2 .1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1l.6-.7c.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.6z"/></svg>
+          WhatsApp Piedade
+        </a>
+        <a class="btn btn-primary" href="https://wa.me/5581993967789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 2 .1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1l.6-.7c.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.6z"/></svg>
+          WhatsApp Pina
+        </a>
+      </div>
+    </div>
+
+    <!-- Quadro de horários (abre/fecha ao clicar no botão) -->
+    <section class="section">
+      <button class="btn btn-ghost schedule-btn" id="scheduleToggle" type="button" aria-expanded="false" aria-controls="scheduleContent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+        Quadro de Horários
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+
+      <div class="schedule-content" id="scheduleContent" hidden>
+        <div class="unit-tabs" role="tablist" aria-label="Selecionar unidade para ver horários">
+          <button class="unit-tab active" data-target="schedule-piedade" role="tab" aria-selected="true" type="button">Piedade</button>
+          <button class="unit-tab" data-target="schedule-pina" role="tab" aria-selected="false" type="button">Pina</button>
+        </div>
+
+        <div class="unit-panel active" id="schedule-piedade">
+          <img class="schedule-img" src="img/hpiedade.jpeg" alt="Quadro de horários — unidade Piedade">
+        </div>
+
+        <div class="unit-panel" id="schedule-pina">
+          <img class="schedule-img" src="img/hpina.jpeg" alt="Quadro de horários — unidade Pina">
+        </div>
+      </div>
+    </section>
+
+    <!-- Como chegar (mapa por unidade) -->
+    <section class="section">
+      <div class="section-title">Como chegar</div>
+
+      <div class="unit-tabs" role="tablist" aria-label="Selecionar unidade para ver localização">
+        <button class="unit-tab active" data-target="map-piedade" role="tab" aria-selected="true" type="button">Piedade</button>
+        <button class="unit-tab" data-target="map-pina" role="tab" aria-selected="false" type="button">Pina</button>
+      </div>
+
+      <div class="unit-panel active" id="map-piedade">
+        <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.2167997875827!2d-34.93223592588099!3d-8.18090219185039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aae1006767aa95%3A0x6ea0b0317511b8dc!2sCT%20Fire!5e0!3m2!1spt-BR!2sus!4v1787792810714!5m2!1spt-BR!2sus"
+          width="600" height="450" style="border:0;" allowfullscreen></iframe>
+        <p class="map-address"><b>Piedade</b> — R. São João, 84</p>
+      </div>
+
+      <div class="unit-panel" id="map-pina">
+        <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15800.413095795791!2d-34.885902!3d-8.09095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f0005777bc5%3A0xec619a3aabf5af1!2sCT%20Fire%20Pina!5e0!3m2!1spt-BR!2sus!4v1787792905331!5m2!1spt-BR!2sus"
+          width="600" height="450" style="border:0;" allowfullscreen></iframe>
+        <p class="map-address"><b>Pina</b> — Rua Itaiçuba, 09</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-brand">CT FIRE · Centro de Treinamento</div>
+
+    <p class="foot-description">
+      CT de artes marciais e desenvolvimento físico, com aulas de <b>Muay Thai, Jiu-Jitsu, Judô e Taekwondo</b>
+      para todas as idades e níveis. Treinos focados em disciplina, respeito, condicionamento físico e evolução
+      pessoal, com acompanhamento profissional e ambiente preparado para iniciantes e atletas.
+    </p>
+
+    <div class="foot-divider"></div>
+
+    <div class="contacts">
+      <div class="contact-unit">
+        <span class="unit-name">Piedade</span>
+        <span class="unit-phone">(81) 9 9626-5010</span>
+        <span class="unit-address">R. São João, 84</span>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-unit">
+        <span class="unit-name">Pina</span>
+        <span class="unit-phone">(81) 9 9396-7789</span>
+        <span class="unit-address">Rua Itaiçuba, 09</span>
+      </div>
+    </div>
+
+    <div class="foot-copy">Horário de Funcionamento: Segunda a Sexta, das 7:00 às 22:00</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
