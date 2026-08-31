@@ -375,7 +375,7 @@ footer {
    embutidos, tipo o do WhatsApp, jogam o link pra esquerda). */
 .contact-unit .unit-phone,
 .contact-unit .unit-phone a {
-  display: inline-block;
+  display: inline;
   width: 100%;
   text-align: center;
   color: var(--steel-light) !important;
