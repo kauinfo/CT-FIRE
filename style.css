@@ -93,7 +93,7 @@ main {
 .experimental {
   font-family: 'Barlow', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(16px, 4.5vw, 20px);
   letter-spacing: 0.4px;
   color: #fff;
   max-width: 420px;
@@ -369,6 +369,20 @@ footer {
   color: var(--steel-light);
 }
 
+/* Segunda camada de segurança: se o navegador linkar o telefone
+   mesmo com a meta tag, isso anula a cor azul e o sublinhado
+   e força o texto a continuar centralizado (alguns navegadores
+   embutidos, tipo o do WhatsApp, jogam o link pra esquerda). */
+.contact-unit .unit-phone,
+.contact-unit .unit-phone a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: var(--steel-light) !important;
+  text-decoration: none !important;
+  pointer-events: none;
+}
+
 .contact-unit .unit-address {
   font-size: 12px;
   color: var(--text-muted);
@@ -391,5 +405,32 @@ footer {
     width: 50%;
     height: 1px;
     align-self: center;
+  }
+}
+
+/* ==========================================================
+   TELAS BEM PEQUENAS (iPhone SE, celulares mais estreitos)
+   Reduz um pouco os espaçamentos e o mapa para não ficar apertado
+   ========================================================== */
+@media (max-width: 380px) {
+  main {
+    padding: 20px 5vw 32px;
+  }
+
+  .btn {
+    padding: 15px 20px;
+    font-size: 13px;
+  }
+
+  .map-frame {
+    height: 200px;
+  }
+
+  .section {
+    margin-top: -15px;
+  }
+
+  footer {
+    margin-top: -15px;
   }
 }
